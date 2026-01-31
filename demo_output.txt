@@ -1,0 +1,93 @@
+================================================================================
+WOLFRAM ALPHA SCRAPER DEMONSTRATION
+Educational Tool for Formula Scraping
+================================================================================
+
+1. BASIC USAGE
+--------------
+Command: python cli.py "quadratic formula"
+Output: Searches WolframAlpha for the quadratic formula and saves to results.json
+
+2. BATCH PROCESSING
+-------------------
+Command: python cli.py -f sample_queries.txt -o batch_results.json
+Queries from sample_queries.txt:
+  - quadratic formula
+  - pythagorean theorem
+  - area of circle
+  - volume of sphere
+  - distance formula
+
+3. INTERACTIVE MODE
+-------------------
+Command: python cli.py -i
+User can enter queries interactively:
+  Query: quadratic formula
+  [Results displayed...]
+  Query: exit
+
+4. PROGRAMMATIC USAGE
+---------------------
+Python Code:
+  from wolframalpha_scraper import WolframAlphaScraper
+  scraper = WolframAlphaScraper()
+  result = scraper.search_formula("pythagorean theorem")
+  scraper.print_results(result)
+
+5. EXAMPLE SCRIPTS
+------------------
+Command: python examples.py
+Runs pre-defined examples demonstrating various use cases
+
+================================================================================
+FEATURES DEMONSTRATED
+================================================================================
+✓ Single query search
+✓ Multiple query batch processing
+✓ Interactive mode
+✓ Save results to JSON
+✓ Custom delay configuration
+✓ Quiet mode for scripts
+✓ Error handling
+✓ Bilingual documentation
+
+================================================================================
+SAMPLE OUTPUT STRUCTURE
+================================================================================
+{
+  "query": "quadratic formula",
+  "url": "https://www.wolframalpha.com/input?i=quadratic+formula",
+  "status": "success",
+  "error": null,
+  "results": [
+    {
+      "title": "Formula",
+      "content": ["Formula content..."],
+      "images": [{"src": "...", "alt": "..."}],
+      "formulas": ["x = (-b ± √(b²-4ac)) / 2a"]
+    }
+  ]
+}
+
+================================================================================
+INSTALLATION & SETUP
+================================================================================
+1. git clone https://github.com/syaharip005/WolframAlpha.git
+2. cd WolframAlpha
+3. pip install -r requirements.txt
+4. python cli.py "your query here"
+
+================================================================================
+DOCUMENTATION FILES
+================================================================================
+- README.md         : Main documentation (bilingual)
+- QUICKSTART.md     : Quick start guide
+- USAGE.md          : Detailed usage guide
+- PROJECT_SUMMARY.md: Project overview
+- examples.py       : Working examples
+- test_scraper.py   : Test suite
+
+================================================================================
+For more information, see README.md or visit the GitHub repository
+Repository: https://github.com/syaharip005/WolframAlpha
+================================================================================
