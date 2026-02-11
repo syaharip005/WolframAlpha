@@ -1,4 +1,3 @@
-
 🔬 **Alat untuk scraping rumus dari WolframAlpha untuk tujuan pendidikan**  
 🔬 **Tool for scraping formulas from WolframAlpha for educational purposes**
 
